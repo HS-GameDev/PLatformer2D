@@ -1,2 +1,2 @@
-﻿46633
+﻿39649
 /home/seyyitgenc/Godot/Godot_v3.4.3-stable_mono_x11_64/Godot_v3.4.3-stable_mono_x11.64

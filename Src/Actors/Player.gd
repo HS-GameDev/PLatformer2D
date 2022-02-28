@@ -1,14 +1,15 @@
 extends Actor
 
-export var stomp_impulse: =1000.0
+export var stomp_impulse: = 1000.0
 
-func _on_EnemyDetector_area_entered(area):
+func _on_EnemyDetector_area_entered(_area):
 	_velocity = calculate_stomp_velocity(_velocity,stomp_impulse)
 	
-func _on_EnemyDetector_body_entered(body):
+func _on_EnemyDetector_body_entered(_body):
 	queue_free()
 
-func _physics_process(delta):
+
+func _physics_process(_delta):
 	var is_jump_interrupted: = Input.is_action_just_released("jump") and _velocity.y < 0.0
 	var direction: = get_direction()
 	_velocity = calculate_move_velocity(_velocity,speed,direction, is_jump_interrupted)
